@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Underscore JS Library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato|Quando|Ubuntu" rel="stylesheet">
+        <!-- My CSS styles -->
+        <link rel="stylesheet" href="main.css">
+    </head>
+    
+    <body class="senate">
+         <div class="container-fluid">
+           <header class="row">
+               <div class="col-sm-2">
+                   <img src="images/TGIF_logo.png" class="logo">
+               </div>
+               <div class="col-sm-8">
+                   <h1>TRANSPARENT GOVERNMENT IN FACT</h1>
+               </div>
+               <div class="col-sm-2">
+                   <span class="glyphicon glyphicon-envelope mail_icon" aria-hidden="true"><a class="email" href="mailto:info@tgif.net">info@tgif.net</a></span>
+               </div>
+           </header>
+    
+            <nav class="navbar row">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="house.html">House</a></li>
+                              <li><a href="senate.html">Senate</a></li>
+                            </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="house_attendance.html">House</a></li>
+                              <li><a href="senate_attendance.html">Senate</a></li>
+                            </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="house_loyalty.html">House</a></li>
+                              <li class="active"><a>Senate</a></li>
+                            </ul>
+                    </li>
+                </ul>
+        
+            </nav> 
+        
+             
+            <!--Table container-->
+            <div class="main_content"> 
+                <div class="row"><!-- Start of first row-->
+                    <div class="col-md-6 col-sm-6 col-xs-12">  
+                        <h2>Party Loyalty</h2>
+                        <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h2>Senate at a glance</h2>
+                        <table id="loyalty" class="table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Party</th>
+                                    <th>Number of Reps</th>
+                                    <th>% Voted with Party</th>
+                                </tr>
+                            </thead>
+                            <tbody id="glance">
+                            <!-- table data filled by JS function addGlanceData() -->       
+                            </tbody>
+                        </table>
+                    </div>
+                </div> <!-- End of first row-->
+                    
+                <div class="line"></div>
+                
+                <div class="row"><!-- Start of second row-->
+                    <div class="col-md-6 col-sm-6 col-xs-12"> 
+                        <h2>Least Loyal (Bottom 10%)</h2>
+                        <table class="table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Number Party Votes</th>
+                                    <th>% Party Votes</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leastL">
+                            <!-- table data filled by JS function addMostLeastData(mostLeastData) -->  
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-6 col-xs-12"> 
+                        <h2>Most Loyal (Top 10%)</h2>
+                        <table class="table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Number Party Votes</th>
+                                    <th>% Party Votes</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mostL">
+                            <!-- table data filled by JS function addMostLeastData(mostLeastData) --> 
+                            </tbody>
+                        </table>
+                    </div>
+                </div> <!-- End of second row -->
+
+            </div> <!-- End of main content -->
+                     
+        </div>  <!-- End of main div (container fluid) -->
+
+    <footer id="footer"></footer> 
+    <!-- Mustache -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <!--<script src="/JS/congress113senate.js"></script>-->
+    <script type="text/javascript" src="JS/loyalty.js"></script>
+    <script id="mostLeast-template" type="text/html">
+    <tr>
+    <td>{{name}}</td>
+    <td>{{total}}</td>
+    <td>{{with_party_pct}}</td>
+    </tr>
+    </script>
+    </body>
+</html>

@@ -1,0 +1,182 @@
+/* Colours to use:
+Clouds (very light grey): rgb(236, 240, 241)
+Silver (light grey): rgb(189, 195, 199)
+Concrete (mid grey): rgb(149, 165, 166)
+Wet Asphalt (dark blue grey): rgb(52, 73, 94)
+Midnight Blue: rgb(44, 62, 80)
+Green Sea (Accent color): rgb(22, 160, 133)
+*/
+
+body{
+    background-color: rgb(236, 240, 241);
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(52, 73, 94);
+}
+
+header{
+    height: 200px;
+    background-image: url("images/washington_skyline.png");
+    background-size: cover; 
+    background-position: no-repeat; 
+    background-position-y: 45%;
+}
+
+.header {
+    position: fixed;
+}
+
+.logo{
+    max-width: 100px;
+    padding: 5px;
+}
+
+.email {
+    font-family: 'Quando', serif;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.mail_icon{
+    margin-top: 20px;
+    font-size: 1em;
+    color: rgb(22, 160, 133);
+    background-color: white;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Quando', serif;
+    color: rgb(22, 160, 133);
+}
+
+h1{
+    font-size: 2.5em;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);
+    border-top: solid 4px rgb(22, 160, 133);
+    border-bottom: solid 4px rgb(22, 160, 133);
+    padding-left: 0px;
+    display: inline-block;
+}
+
+nav {
+    background-color: rgb(52, 73, 94);
+    height: 50px;
+}
+
+.navbar {
+    border-radius: 0px;
+    border: 0px;
+    text-align: left;
+    float: none;
+    border-top: solid 5px;
+    border-bottom: solid 10px;
+    height: 60px;
+}
+
+li{
+    width: 160px;
+}
+
+a{
+color: rgb(22, 160, 133);  
+}
+
+ul.dropdown-menu{
+    min-width: none;
+    width: 140px;
+    border: none;
+}
+
+li > a{
+    color: white;
+}
+
+.active a{
+    background-color: rgb(236, 240, 241);
+    color: rgb(52, 73, 94);
+    border-bottom: solid 5px;
+} /* Gives the style Home when active */
+
+.dropdown-menu > .active a {
+    background-color: rgb(52, 73, 94) !important;
+} /* Gives the selected House/Senate option with dark blue background*/
+
+.main_content{
+    padding: 50px;
+}
+
+.home{
+    background: url(images/house.png) no-repeat fixed;
+    height: 900px;
+    padding-bottom: 50px;
+    border: solid 10px;
+    background-size: cover;
+    margin-bottom: 50px;
+    background-position-y: 40%;
+}
+
+.collapse{
+    background-color: rgba(236, 240, 241, 0.8);
+    padding: 10px;
+}
+
+button.accordian {
+    width: 100%;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+table{
+     margin-bottom: 50px;
+     width: 100%;
+}
+
+th{
+    background-color: rgb(52, 73, 94);
+    color: white;
+    padding: 0.4em;
+}
+
+th.wide{
+    width: 30%;
+}
+
+th.narrow{
+    width: 10%;
+}
+
+td{
+    min-width: 120px;
+    padding: 0.4em;
+}
+
+label{
+    padding: 0px 5px;  
+}
+
+footer {
+    height: 50px;
+    background-color: rgb(52, 73, 94);
+    color: rgb(236, 240, 241);
+    text-align: center;
+}
+
+.warning{
+    background-color: white;
+    color: rgb(22, 160, 133);
+    font-weight: 400;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    border: solid 2px rgb(22, 160, 133); 
+}
+
+.line{
+    border-bottom: solid 4px rgb(52, 73, 94); 
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:51099/house.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="./house_files/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="./house_files/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="./house_files/bootstrap.min.js"></script>
+        <!-- Underscore JS Library-->
+        <script src="./house_files/underscore-min.js"></script>
+        <!-- Google Fonts -->
+        <link href="./house_files/css" rel="stylesheet">
+        <!-- My CSS styles -->
+        <link rel="stylesheet" href="./house_files/main.css">
+    </head>
+    
+    <body onload="onload()"> 
+       <div class="container-fluid">
+           <header class="row">
+               <div class="col-sm-2">
+                   <img src="./house_files/TGIF_logo.png" class="logo">
+               </div>
+               <div class="col-sm-8">
+                   <h1>Transparent Government in Fact </h1>
+               </div>
+               <div class="col-sm-2">
+                   <span class="glyphicon glyphicon-envelope mail_icon" aria-hidden="true"><a class="email" href="mailto:info@tgif.net">info@tgif.net</a></span>
+               </div>
+           </header>
+    
+            <nav class="navbar row">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://127.0.0.1:51099/index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="http://127.0.0.1:51099/house.html#">Congress 113
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li class="active"><a href="http://127.0.0.1:51099/house.html">House</a></li>
+                              <li><a href="http://127.0.0.1:51099/senate.html">Senate</a></li>
+                            </ul>
+                    </li>
+                </ul>
+        
+            </nav> 
+        
+
+            <!--Table container-->
+            <div class="main_content"> 
+                <h2>Congressmen</h2>
+                <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+                <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative.     
+            </p></div>
+        
+            <div class="row message"> <!-- onchange and onclick both seem to work the same - what's the diffference???-->
+                <form class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-6">
+                    <p><b>Filter by Party:</b></p>
+                    <label><input onchange="filterOnClick()" type="checkbox" class="D" name="party" value="Democrat"> Democrat</label>
+                    <label><input onchange="filterOnClick()" type="checkbox" class="R" name="party" value="Republican"> Republican</label>
+                    <label><input onchange="filterOnClick()" type="checkbox" class="I" name="party" value="Independent"> Independent</label> 
+                </form>
+                
+              <form class="col-md-4 col-sm-5 col-xs-6">
+                    <p><b>Filter by State:</b></p>
+                    <select onchange="filterOnClick()">
+                        <option class="default">All</option>
+                        <option class="AL">Alabama (AL)</option>
+                        <option class="AK">Alaska (AK)</option>
+                        <option class="AZ">Arizona (AZ)</option>
+                        <option class="AR">Arkansas (AR)</option>
+                        <option class="CA">California (CA)</option>
+                        <option class="CO">Colorado (CO)</option>
+                        <option class="CT">Connecticut (CT)</option>
+                        <option class="DE">Delaware (DE)</option>
+                        <option class="FL">Florida (FL)</option>
+                        <option class="GA">Georgia (GA)</option>
+                        <option class="HI">Hawaii (HI)</option>
+                        <option class="ID">Idaho (ID)</option>
+                        <option class="IL">Illinois (IL)</option>
+                        <option class="IN">Indiana (IN)</option>
+                        <option class="IA">Iowa (IA)</option>
+                        <option class="KS">Kansas (KS)</option>
+                        <option class="KY">Kentucky (KY)</option>
+                        <option class="LA">Louisiana (LA)</option>
+                        <option class="ME">Maine (ME)</option>
+                        <option class="MD">Maryland (MD)</option>
+                        <option class="MA">Massachusetts (MA)</option>
+                        <option class="MI">Michigan (MI)</option>
+                        <option class="MN">Minnesota (MN)</option>
+                        <option class="MS">Mississippi (MS)</option>
+                        <option class="MO">Missouri (MO)</option>
+                        <option class="MT">Montana (MT)</option>
+                        <option class="NE">Nebraska (NE)</option>
+                        <option class="NV">Nevada (NV)</option>
+                        <option class="NH">New Hampshire (NH)</option>
+                        <option class="NJ">New Jersey (NJ)</option>
+                        <option class="NM">New Mexico (NM)</option>
+                        <option class="NY">New York (NY)</option>
+                        <option class="NC">North Carolina (NC)</option>
+                        <option class="ND">North Dakota (ND)</option>
+                        <option class="OH">Ohio (OH)</option>
+                        <option class="OK">Oklahoma (OK)</option>
+                        <option class="OR">Oregon (OR)</option>
+                        <option class="PA">Pennsylvania (PA)</option>
+                        <option class="RI">Rhode Island (RI)</option>
+                        <option class="SC">South Carolina (SC)</option>
+                        <option class="SD">South Dakota (SD)</option>
+                        <option class="TN">Tennessee (TN)</option>
+                        <option class="TX">Texas (TX)</option>
+                        <option class="UT">Utah (UT)</option>
+                        <option class="VT">Vermont (VT)</option>
+                        <option class="VA">Virginia (VA)</option>
+                        <option class="WA">Washington (WA)</option>
+                        <option class="WV">West Virginia (WV)</option>
+                        <option class="WI">Wisconsin (WI)</option>
+                        <option class="WY">Wyoming (WY)</option>
+                    </select>
+                </form>
+                
+        
+                <div class="table-responsive col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <table class="table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th class="wide">Name</th>
+                                <th class="narrow">Party</th>
+                                <th accesskey="" class="narrow">State</th>
+                                <th class="narrow">Seniority</th>
+                                <th class="wide">Percentage of votes with party</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_data"><div class="warning">No results. Try using a broader filter</div></tbody>
+                    </table>
+                </div>
+            </div>
+        
+        </div>  <!-- End of main content div-->
+    <footer id="footer">© Copyright TGIF 2016 | All Rights Reserved</footer> 
+    <script src="./house_files/congress113house.js"></script>
+    <script src="./house_files/main.js"></script>
+    
+</body></html>
